@@ -31,22 +31,6 @@ const projectQuery = (url, eventName, project) => (
 							}
 						}
 					}
-					owner {
-						... on ProjectOwner {
-							projects( search: "${project}", first: 10, states: [OPEN] ) {
-								nodes {
-									name
-									id
-									columns( first: 100 ) {
-										nodes {
-											id
-											name
-										}
-									}
-								}
-							}
-						}
-					}
 				}
 			}
 		}

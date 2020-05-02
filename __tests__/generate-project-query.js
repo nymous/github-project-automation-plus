@@ -27,22 +27,6 @@ const issueQuery = `query {
 							}
 						}
 					}
-					owner {
-						... on ProjectOwner {
-							projects( search: "Backlog", first: 10, states: [OPEN] ) {
-								nodes {
-									name
-									id
-									columns( first: 100 ) {
-										nodes {
-											id
-											name
-										}
-									}
-								}
-							}
-						}
-					}
 				}
 			}
 		}
@@ -69,22 +53,6 @@ const pullrequestQuery = `query {
 								nodes {
 									id
 									name
-								}
-							}
-						}
-					}
-					owner {
-						... on ProjectOwner {
-							projects( search: "Backlogg", first: 10, states: [OPEN] ) {
-								nodes {
-									name
-									id
-									columns( first: 100 ) {
-										nodes {
-											id
-											name
-										}
-									}
 								}
 							}
 						}
